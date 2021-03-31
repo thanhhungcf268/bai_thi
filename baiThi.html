@@ -49,7 +49,7 @@
         let array = [1, 1]
         for (let i=0;i<array.length;i++){
             array.push(array[i]+array[i+1]);
-            if(number<array.length-1){
+            if(number<array[array.length-1]){
                 break;
             }
         }
