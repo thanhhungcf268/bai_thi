@@ -46,9 +46,15 @@
     // câu 3
     let number = 5;
     function isFibonacci(number) {
-        let array = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+        let array = [1, 1]
+        for (let i=0;i<array.length;i++){
+            array.push(array[i]+array[i+1]);
+            if(number<array.length-1){
+                break;
+            }
+        }
         if (number < 1) {
-            return "bạn hãy nhập số lớn hơn 0 ";
+            return false;
         }
         for (let i = 0; i < array.length; i++) {
             if (number === array[i]) {
